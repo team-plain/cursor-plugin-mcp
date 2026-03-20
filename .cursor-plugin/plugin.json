@@ -1,5 +1,5 @@
 {
-  "name": "plain",
+  "name": "Plain",
   "version": "1.0.0",
   "description": "Connect Cursor to Plain — manage support threads, customers, tenants, and help center articles directly from your editor.",
   "author": {
@@ -7,7 +7,7 @@
     "email": "help@plain.com"
   },
   "homepage": "https://plain.com",
-  "repository": "https://github.com/team-plain/plain-cursor-mcp",
+  "repository": "https://github.com/team-plain/cursor-plugin-mcp",
   "license": "MIT",
   "keywords": [
     "plain",
