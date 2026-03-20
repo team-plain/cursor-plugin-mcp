@@ -1,0 +1,63 @@
+---
+description: Guidelines for using the Plain MCP tools to manage support threads, customers, tenants, and help center content.
+globs:
+alwaysApply: true
+---
+
+# Plain MCP
+
+You have access to the Plain MCP server which connects to the user's Plain workspace. Use these tools to help with customer support workflows.
+
+## Available tools
+
+### Threads
+- **getThreads** / **getThreadDetails** / **searchThreads**: Query and search support threads.
+- **replyToThread**: Send a reply to a customer thread.
+- **addGeneratedReply**: Add an AI-generated draft reply for review.
+- **assignThread** / **unassignThread**: Assign or unassign threads to team members.
+- **markThreadAsDone** / **markThreadAsTodo**: Change thread status.
+- **snoozeThread**: Snooze a thread until a specified time.
+- **changeThreadPriority**: Adjust thread priority.
+- **addLabels** / **removeLabels**: Manage thread labels.
+- **createNote**: Add an internal note to a thread.
+
+### Customers
+- **getCustomers** / **getCustomerDetails** / **searchCustomers**: Look up customer information.
+- **getCustomerThreads**: Get all threads for a specific customer.
+- **upsertCustomer**: Create or update a customer record.
+
+### Tenants
+- **getTenants** / **getTenantDetails** / **searchTenants**: Query tenant (company) information.
+- **upsertTenant**: Create or update a tenant.
+- **upsertTenantField**: Set custom fields on a tenant.
+
+### Thread fields
+- **getThreadFieldSchemas**: List available thread field schemas.
+- **createThreadFieldSchema** / **updateThreadFieldSchema** / **deleteThreadFieldSchema**: Manage thread field schemas.
+- **upsertThreadField** / **bulkUpsertThreadFields**: Set custom field values on threads.
+- **reorderThreadFieldSchemas**: Change the display order of thread fields.
+
+### Labels
+- **getLabels**: List all label types.
+- **createLabelType** / **updateLabelType**: Manage label types.
+- **archiveLabelType** / **unarchiveLabelType**: Archive or restore label types.
+- **moveLabelType**: Reorder a label type.
+
+### Help center
+- **getHelpCenters** / **getHelpCenterArticles** / **getHelpCenterArticle**: Browse help center content.
+- **getHelpCenterArticleBySlug**: Look up an article by its URL slug.
+- **getHelpCenterArticleGroups**: Get article groupings.
+- **upsertHelpCenterArticle**: Create or update a help center article.
+
+### Workspace
+- **getMyUser**: Get the authenticated user's profile.
+- **getMyWorkspace**: Get workspace details.
+- **getUserByEmail**: Look up a team member by email.
+- **getMyAssignedThreads**: Get threads assigned to the authenticated user.
+
+## Guidelines
+
+- When searching for threads or customers, prefer `searchThreads` / `searchCustomers` over listing all and filtering.
+- Use `addGeneratedReply` to draft responses that can be reviewed before sending, rather than `replyToThread` directly, unless the user explicitly asks to send.
+- Always confirm before performing destructive or state-changing operations (assigning, marking done, replying).
+- When displaying thread information, include the thread title, status, priority, and assignee.

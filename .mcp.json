@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "plain": {
+      "type": "remote",
+      "url": "https://mcp.plain.com/mcp"
+    }
+  }
+}
